@@ -14,7 +14,7 @@
   color: #888;
 }
 
-/* Global styles to ensure no scrollbars and full viewport */
+
 html, body, #root {
   height: 100%;
   width: 100%;
@@ -33,12 +33,12 @@ html, body, #root {
 }
 
 .carousel-container {
-  height: 100vw; /* Set container height to fill the viewport height */
+  height: 100vw; 
 }
 
 .carousel-img {
-  width: 100vw; /* Set image width to fill the container */
-  height: 100vh; /* Set image height to fill the container */
+  width: 100vw; 
+  height: 100vh; 
   object-fit: cover;
   filter: brightness(50%);
 }
@@ -54,12 +54,12 @@ html, body, #root {
   font-family: 'Poppins', sans-serif;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: calc(1vh + 20px); /* Adjust font size for responsiveness */
+  font-size: calc(1vh + 20px); 
   font-weight: bold;
   text-align: center;
 }
 
-/* Content sections general styling */
+
 .content-section {
   padding: 40px 20px;
   margin-top: 0;
@@ -114,16 +114,16 @@ html, body, #root {
 
 .content-section .content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 20px; /* Space between columns */
-  align-items: center; /* Vertically align items in the grid */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
+  align-items: center; 
 }
 
 .content-section .content-grid > div {
-  align-self: center; /* Ensure direct children of Row (now grid items) are vertically centered */
+  align-self: center; 
 }
 
-/* Ensure the text content is on the right for description and left for fun */
+
 .description-section .content-grid {
   grid-template-areas: "images text";
 }
@@ -139,24 +139,24 @@ html, body, #root {
 .image-gallery {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
+  align-items: center; 
+  justify-content: center; 
   position: relative;
   width: 100%;
 }
 
 .staggered-img {
-  width: 90%; /* Adjust image width within its grid area */
+  width: 90%; 
   max-width: 300px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
-  margin-bottom: 20px; /* Add some space between stacked images */
+  margin-bottom: 20px; 
 }
 
 .staggered-img:last-child {
-  margin-bottom: 0; /* No margin after the last image */
+  margin-bottom: 0; 
 }
 
 .staggered-img.img-1 {
@@ -183,16 +183,16 @@ html, body, #root {
   transform: translateX(-40px) scale(1.05);
 }
 
-/* Remove all staggering specific styles */
+
 .fun-section .image-gallery .img-1,
 .fun-section .image-gallery .img-2,
 .fun-section .image-gallery .img-3,
 .description-section .image-gallery .img-1,
 .description-section .image-gallery .img-2,
 .description-section .image-gallery .img-3 {
-  position: static; /* Remove relative positioning for staggering */
-  /* transform: none;  Remove any transformations */
-  z-index: auto; /* Reset z-index */
+  position: static; 
+  
+  z-index: auto; 
 }
 
 .contact-section a {
@@ -204,14 +204,14 @@ html, body, #root {
   text-decoration: underline;
 }
 
-/* Customize carousel arrows */
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   width: 40px;
   height: 40px;
   background-size: 100%, 100%;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .carousel-control-prev,
@@ -226,27 +226,27 @@ html, body, #root {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 50px; /* Adjust size as needed */
+  width: 50px; 
   height: auto;
-  z-index: 1050; /* Ensure it's above the carousel */
+  z-index: 1050; 
 }
 
 @media (max-width: 768px) {
   .content-section .content-grid {
-    grid-template-columns: 1fr; /* Stack columns on small screens */
+    grid-template-columns: 1fr; 
     gap: 0;
   }
 
   .description-section .content-grid {
     grid-template-areas:
       "text"
-      "images"; /* Text above images */
+      "images"; 
   }
 
   .fun-section .content-grid {
     grid-template-areas:
       "text"
-      "images"; /* Text above images */
+      "images"; 
   }
 
   .description-section .text-content,
@@ -269,15 +269,15 @@ html, body, #root {
   }
 
   .staggered-img {
-    width: 60%; /* Make images smaller */
-    max-width: 300px; /* Make images smaller */
+    width: 60%; 
+    max-width: 300px; 
     margin-bottom: 0;
-    /* transform: none !important; Remove any transformations */
+    
   }
 
   .description-section .image-gallery .staggered-img:nth-child(1) {
-    margin-bottom: -20px; /* Less overlap */
-    transform: translateX(-20px); /* Offset horizontally */
+    margin-bottom: -20px; 
+    transform: translateX(-20px); 
     z-index: 3;
   }
 
@@ -286,8 +286,8 @@ html, body, #root {
   }
 
   .description-section .image-gallery .staggered-img:nth-child(2) {
-    margin-bottom: -20px; /* Less overlap */
-    transform: translateX(20px); /* Offset horizontally */
+    margin-bottom: -20px; 
+    transform: translateX(20px); 
     z-index: 2;
   }
 
@@ -296,7 +296,7 @@ html, body, #root {
   }
 
   .description-section .image-gallery .staggered-img:nth-child(3) {
-    transform: translateX(-20px); /* Offset horizontally */
+    transform: translateX(-20px); 
     z-index: 1;
   }
 
@@ -305,8 +305,8 @@ html, body, #root {
   }
 
   .fun-section .image-gallery .staggered-img:nth-child(1) {
-    margin-bottom: -20px; /* Less overlap */
-    transform: translateX(-20px); /* Offset horizontally */
+    margin-bottom: -20px; 
+    transform: translateX(-20px); 
     z-index: 3;
   }
 
@@ -315,8 +315,8 @@ html, body, #root {
   }
 
   .fun-section .image-gallery .staggered-img:nth-child(2) {
-    margin-bottom: -20px; /* Less overlap */
-    transform: translateX(20px); /* Offset horizontally */
+    margin-bottom: -20px; 
+    transform: translateX(20px); 
     z-index: 2;
   }
 
@@ -325,7 +325,7 @@ html, body, #root {
   }
 
   .fun-section .image-gallery .staggered-img:nth-child(3) {
-    transform: translateX(-20px); /* Offset horizontally */
+    transform: translateX(-20px); 
     z-index: 1;
   }
 
@@ -334,45 +334,41 @@ html, body, #root {
   }
 
   .content-section h2 {
-    text-align: center; /* Center align titles on mobile */
+    text-align: center; 
   }
 }
 
 .footer {
-  background-color: #343a40; /* Dark gray background */
+  background-color: #343a40; 
   color: white;
   text-align: center;
-  padding: 20px 0; /* Increased padding for larger footer */
+  padding: 20px 0; 
   font-size: 0.9em;
-  display: flex; /* Enable flexbox */
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 
 .footer p {
-  margin: 0; /* Remove default margin from paragraph to ensure proper vertical centering */
-  font-size: 1.1em; /* Ensure copyright text is same size as icons */
+  margin: 0; 
+  font-size: 1.1em; 
 }
 
 .footer-links {
-  margin-left: 30px; /* Space between text and links */
+  margin-left: 30px; 
   display: flex;
-  gap: 20px; /* Space between links */
+  gap: 20px; 
 }
 
 .footer-links a {
-  color: white; /* Link color */
-  text-decoration: none; /* Remove underline */
-  font-size: 1.1em; /* Slightly increased font size for icons */
+  color: white; 
+  text-decoration: none; 
+  font-size: 1.1em; 
   transition: color 0.3s ease-in-out;
   display: flex;
   align-items: center;
 }
 
-.footer-links a svg {
-  /* Removed margin-right as text is no longer present */
-}
-
 .footer-links a:hover {
-  color: #007bff; /* Hover color */
+  color: #007bff; 
 }

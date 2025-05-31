@@ -14,7 +14,6 @@ function App() {
     const mainCarouselNumbers = [1, 2, 4, 6, 7, 8, 12, 14, 15];
     setMainCarouselImages(mainCarouselNumbers.map(num => `/carousel${num}.png`));
 
-    // Select 3 unique images for the about section from remaining carousel images
     const allCarouselImageNumbers = Array.from({ length: 15 }, (_, i) => i + 1);
     const availableForAbout = allCarouselImageNumbers.filter(num => !mainCarouselNumbers.includes(num));
     const aboutNumbers = availableForAbout.sort(() => 0.5 - Math.random()).slice(0, 3);
