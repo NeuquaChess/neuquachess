@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Global styles to ensure no scrollbars and full viewport */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.App {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  overflow-x: hidden; 
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel-container {
+  height: 100vw; /* Set container height to fill the viewport height */
+}
+
+.carousel-img {
+  width: 100vw; /* Set image width to fill the container */
+  height: 100vh; /* Set image height to fill the container */
+  object-fit: cover;
+  filter: brightness(50%);
+}
+/* @media (max-width: 700px) {
+  .carousel-text {
+  font-size:2.5rem;
+  }
+} */
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'Poppins', sans-serif;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: calc(1vh + 20px); /* Adjust font size for responsiveness */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Content sections general styling */
+.content-section {
+  padding: 40px 20px;
+  margin-top: 0;
+}
+
+.description-section,
+.contact-section {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+}
+
+.description-section h2,
+.contact-section h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #0056b3;
+}
+
+.description-section p,
+.contact-section p {
+  font-size: 1em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+}
+
+.description-section .text-content p {
+  text-align: left;
+  max-width: none;
+  margin: 0;
+}
+
+.fun-section {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+}
+
+.fun-section h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #0056b3;
+  text-align: left;
+}
+
+.fun-section .text-content p {
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.content-section .content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between columns */
+  align-items: center; /* Vertically align items in the grid */
+}
+
+.content-section .content-grid > div {
+  align-self: center; /* Ensure direct children of Row (now grid items) are vertically centered */
+}
+
+/* Ensure the text content is on the right for description and left for fun */
+.description-section .content-grid {
+  grid-template-areas: "images text";
+}
+
+.description-section .image-gallery {
+  grid-area: images;
+}
+
+.description-section .text-content {
+  grid-area: text;
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  position: relative;
+  width: 100%;
+}
+
+.staggered-img {
+  width: 90%; /* Adjust image width within its grid area */
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px; /* Add some space between stacked images */
+}
+
+.staggered-img:last-child {
+  margin-bottom: 0; /* No margin after the last image */
+}
+
+.staggered-img.img-1 {
+  transform: translateX(-40px);
+}
+
+.staggered-img.img-1:hover {
+  transform: translateX(-40px) scale(1.05);
+}
+
+.staggered-img.img-2 {
+  transform: translateX(40px);
+}
+
+.staggered-img.img-2:hover {
+  transform: translateX(40px) scale(1.05);
+}
+
+.staggered-img.img-3 {
+  transform: translateX(-40px);
+}
+
+.staggered-img.img-3:hover {
+  transform: translateX(-40px) scale(1.05);
+}
+
+/* Remove all staggering specific styles */
+.fun-section .image-gallery .img-1,
+.fun-section .image-gallery .img-2,
+.fun-section .image-gallery .img-3,
+.description-section .image-gallery .img-1,
+.description-section .image-gallery .img-2,
+.description-section .image-gallery .img-3 {
+  position: static; /* Remove relative positioning for staggering */
+  /* transform: none;  Remove any transformations */
+  z-index: auto; /* Reset z-index */
+}
+
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Customize carousel arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  z-index: 1050; /* Ensure it's above the carousel */
+}
+
+@media (max-width: 768px) {
+  .content-section .content-grid {
+    grid-template-columns: 1fr; /* Stack columns on small screens */
+    gap: 0;
+  }
+
+  .description-section .content-grid {
+    grid-template-areas:
+      "text"
+      "images"; /* Text above images */
+  }
+
+  .fun-section .content-grid {
+    grid-template-areas:
+      "text"
+      "images"; /* Text above images */
+  }
+
+  .description-section .text-content,
+  .fun-section .text-content {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .description-section .text-content p,
+  .fun-section .text-content p,
+  .contact-section p {
+    text-align: center;
+  }
+
+  .image-gallery {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .staggered-img {
+    width: 60%; /* Make images smaller */
+    max-width: 300px; /* Make images smaller */
+    margin-bottom: 0;
+    /* transform: none !important; Remove any transformations */
+  }
+
+  .description-section .image-gallery .staggered-img:nth-child(1) {
+    margin-bottom: -20px; /* Less overlap */
+    transform: translateX(-20px); /* Offset horizontally */
+    z-index: 3;
+  }
+
+  .description-section .image-gallery .staggered-img:nth-child(1):hover {
+    transform: translateX(-20px) scale(1.05);
+  }
+
+  .description-section .image-gallery .staggered-img:nth-child(2) {
+    margin-bottom: -20px; /* Less overlap */
+    transform: translateX(20px); /* Offset horizontally */
+    z-index: 2;
+  }
+
+  .description-section .image-gallery .staggered-img:nth-child(2):hover {
+    transform: translateX(20px) scale(1.05);
+  }
+
+  .description-section .image-gallery .staggered-img:nth-child(3) {
+    transform: translateX(-20px); /* Offset horizontally */
+    z-index: 1;
+  }
+
+  .description-section .image-gallery .staggered-img:nth-child(3):hover {
+    transform: translateX(-20px) scale(1.05);
+  }
+
+  .fun-section .image-gallery .staggered-img:nth-child(1) {
+    margin-bottom: -20px; /* Less overlap */
+    transform: translateX(-20px); /* Offset horizontally */
+    z-index: 3;
+  }
+
+  .fun-section .image-gallery .staggered-img:nth-child(1):hover {
+    transform: translateX(-20px) scale(1.05);
+  }
+
+  .fun-section .image-gallery .staggered-img:nth-child(2) {
+    margin-bottom: -20px; /* Less overlap */
+    transform: translateX(20px); /* Offset horizontally */
+    z-index: 2;
+  }
+
+  .fun-section .image-gallery .staggered-img:nth-child(2):hover {
+    transform: translateX(20px) scale(1.05);
+  }
+
+  .fun-section .image-gallery .staggered-img:nth-child(3) {
+    transform: translateX(-20px); /* Offset horizontally */
+    z-index: 1;
+  }
+
+  .fun-section .image-gallery .staggered-img:nth-child(3):hover {
+    transform: translateX(-20px) scale(1.05);
+  }
+
+  .content-section h2 {
+    text-align: center; /* Center align titles on mobile */
+  }
+}
+
+.footer {
+  background-color: #343a40; /* Dark gray background */
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Increased padding for larger footer */
+  font-size: 0.9em;
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin from paragraph to ensure proper vertical centering */
+  font-size: 1.1em; /* Ensure copyright text is same size as icons */
+}
+
+.footer-links {
+  margin-left: 30px; /* Space between text and links */
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.footer-links a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1em; /* Slightly increased font size for icons */
+  transition: color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a svg {
+  /* Removed margin-right as text is no longer present */
+}
+
+.footer-links a:hover {
+  color: #007bff; /* Hover color */
+}
