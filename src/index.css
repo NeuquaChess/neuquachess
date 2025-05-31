@@ -11,12 +11,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #242424; /* Example background */
+  background-color: #242424;
 }
 
 #root {
-  max-width: none; /* Remove max-width restriction */
-  padding: 0; /* Remove padding */
+  max-width: none;
+  padding: 0; 
 }
 
 :root {
