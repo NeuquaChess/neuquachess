@@ -64,7 +64,7 @@ function App() {
           <div className="text-content">
             <h2>Work hard, Play harder</h2>
             <p>
-              You're not just a round of chess; you're part of a team. The Neuqua Chess Team offers exciting team-building activities, bughouse rounds at the 95th street library, and most importantly, a group of friends that will stick with you through the best wins and toughest losses.  
+              You're not just playing a round of chess; you're part of a team. The Neuqua Chess Team offers exciting team-building activities, bughouse rounds at the 95th street library, and most importantly, a group of friends that will stick with you through the best wins and toughest losses.  
             </p>
           </div>
           <div className="image-gallery">
