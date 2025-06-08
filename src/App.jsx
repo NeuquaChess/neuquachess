@@ -83,7 +83,8 @@ function App() {
           <Col md={6}>
             <h2>Contact</h2>
             <p>Neuqua Chess Team Discord: <a href="https://discord.gg/S2YtQrnF" target="_blank" rel="noopener noreferrer">https://discord.gg/S2YtQrnF</a></p>
-            <p>Coach Email: <a href="mailto:james_fox@ipsd.org">james_fox@ipsd.org</a></p>
+            <p>Coach Email 1: <a href="mailto:james_fox@ipsd.org">james_fox@ipsd.org</a></p>
+            <p>Coach Email 2: <a href="mailto:frank_gambino@ipsd.org">frank_gambino@ipsd.org</a></p>
           </Col>
         </Row>
       </Container>
