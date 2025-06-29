@@ -11,7 +11,7 @@ function App() {
   const [aboutSectionImages, setAboutSectionImages] = useState([]);
 
     useEffect(() => {
-    const mainCarouselNumbers = [1, 2, 4, 6, 7, 8, 12, 14, 15];
+    const mainCarouselNumbers = [2, 4, 6, 7, 8, 12, 14, 15];
     setMainCarouselImages(mainCarouselNumbers.map(num => `/carousel${num}.png`));
 
     const allCarouselImageNumbers = Array.from({ length: 15 }, (_, i) => i + 1);
@@ -41,6 +41,21 @@ function App() {
           </Carousel.Item>
         ))}
       </Carousel>
+
+      <Container className="content-section contact-section">
+        <Row>
+          <Col md={6}>
+            <h2>Team Meetings</h2>
+            <p>The chess team meets on regular school days every Tuesday and Thursday from 2:30PM-4:00PM in room D200. First meeting of the 25-26 season is TBA.</p>
+          </Col>
+          <Col md={6}>
+            <h2>Contact Us</h2>
+            <p>Neuqua Chess Team Discord: <a href="https://discord.gg/S2YtQrnF" target="_blank" rel="noopener noreferrer">https://discord.gg/S2YtQrnF</a></p>
+            <p>Coach Email 1: <a href="mailto:james_fox@ipsd.org">james_fox@ipsd.org</a></p>
+            <p>Coach Email 2: <a href="mailto:frank_gambino@ipsd.org">frank_gambino@ipsd.org</a></p>
+          </Col>
+        </Row>
+      </Container>
 
       <Container className="content-section description-section">
         <div className="content-grid">
@@ -72,21 +87,6 @@ function App() {
             <img src="/fun5.png" alt="Fun 5" className="staggered-img img-3" />
           </div>
         </div>
-      </Container>
-
-      <Container className="content-section contact-section">
-        <Row>
-          <Col md={6}>
-            <h2>Team Meetings</h2>
-            <p>The chess team meets on regular school days every Tuesday and Thursday from 2:30PM-4:00PM in room D200. First meeting of the 25-26 season is TBA.</p>
-          </Col>
-          <Col md={6}>
-            <h2>Contact</h2>
-            <p>Neuqua Chess Team Discord: <a href="https://discord.gg/S2YtQrnF" target="_blank" rel="noopener noreferrer">https://discord.gg/S2YtQrnF</a></p>
-            <p>Coach Email 1: <a href="mailto:james_fox@ipsd.org">james_fox@ipsd.org</a></p>
-            <p>Coach Email 2: <a href="mailto:frank_gambino@ipsd.org">frank_gambino@ipsd.org</a></p>
-          </Col>
-        </Row>
       </Container>
 
       <footer className="footer">
