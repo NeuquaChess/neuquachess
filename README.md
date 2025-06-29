@@ -5,7 +5,6 @@ The source code behind the Neuqua Chess website.
 
 Written in React and Typescript.
 
-
 ## License
 **The MIT License (MIT)**
 
