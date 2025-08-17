@@ -90,7 +90,7 @@ function App() {
       </Container>
 
       <footer className="footer">
-        <p>&copy; 2025 Neuqua Valley Chess Team&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;| </p>
+        <p>&copy; 2025 Neuqua Valley Chess Team!&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;| </p>
         <div className="footer-links">
           <a href="https://discord.gg/S2YtQrnF" target="_blank" rel="noopener noreferrer" className="footer-link">
             <FontAwesomeIcon icon={faDiscord} />
