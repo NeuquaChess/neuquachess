@@ -46,7 +46,7 @@ function App() {
         <Row>
           <Col md={6}>
             <h2>Team Meetings</h2>
-            <p>The chess team meets on regular school days every Tuesday and Thursday from 2:30PM-4:00PM in room D221. Our first meeting of the 25-26 season is on September 9th, see you then!</p>
+            <p>The chess team meets on regular school days every Tuesday and Thursday from 2:30PM-4:00PM in room D221. Our first meeting of the 25-26 season is on September 9th, see you then!!!</p>
           </Col>
           <Col md={6}>
             <h2>Contact Us</h2>
