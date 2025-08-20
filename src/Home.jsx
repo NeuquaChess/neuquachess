@@ -73,7 +73,7 @@ function Home() {
           <div className="text-content">
             <h2>About Us</h2>
             <p>
-              Neuqua has two parts to our chess program: A club, and a competitive team that competes in Saturday tournaments. All skill levels are welcome, from beginners to experienced players. We meet every Tuesday and Thursday in room D200. Develop your chess skills, make new friends, and compete in tournaments. Our varsity team competes in IHSA sectionals and the Illinois State Chess Championship. For more casual players, feel free to simply show up after school and play a few rounds.
+              Neuqua has two parts to our chess program: A club, and a competitive team that competes in Saturday tournaments. All skill levels are welcome, from beginners to experienced players. We meet every Tuesday and Thursday in room D221. Develop your chess skills, make new friends, and compete in tournaments. Our varsity team competes in IHSA sectionals and the Illinois State Chess Championship. For more casual players, feel free to simply show up after school and play a few rounds.
             </p>
           </div>
         </div>
